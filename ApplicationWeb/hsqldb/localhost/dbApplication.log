@@ -1,0 +1,7 @@
+/*C3*/SET SCHEMA PUBLIC
+drop table if exists tache CASCADE 
+drop table if exists users CASCADE 
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table tache (id bigint not null, description varchar(255), user bigint not null, primary key (id))
+create table users (id bigint not null, mdp varchar(255), pseudo varchar(255), primary key (id))
